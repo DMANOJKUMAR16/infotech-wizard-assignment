@@ -330,17 +330,20 @@ p {
 
   object-fit: contain;
 }
+
+
+
+
+
 /* =========================
    Compliance Section
 ========================= */
 
 .compliance-section {
-  padding: 100px 0 110px;
+  padding: 95px 0 110px;
   background-color: #ffffff;
-}
-
-.compliance-section .container {
-  max-width: 1320px;
+  overflow: hidden;
+  position: relative;
 }
 
 /* =========================
@@ -349,16 +352,13 @@ p {
 
 .compliance-top {
   display: grid;
+  grid-template-columns: 0.92fr 1.08fr;
 
-  grid-template-columns: 650px 540px;
-
-  justify-content: space-between;
-
-  gap: 20px;
+  gap: 52px;
 
   align-items: start;
 
-  margin-bottom: 18px;
+  margin-bottom: 28px;
 }
 
 /* =========================
@@ -367,18 +367,23 @@ p {
 
 .compliance-heading {
   position: relative;
+  max-width: 760px;
+   margin-left: 0;
 }
 
 .compliance-heading h2 {
-  max-width: 650px;
+  font-size: 50px;
+  line-height: 60px;
+  max-width: 760px;
 
-  font-size: 58px;
-  line-height: 72px;
+
   font-weight: 700;
 
   letter-spacing: -1px;
 
   color: var(--text-dark);
+
+  
 }
 
 .compliance-heading h2 span {
@@ -392,12 +397,12 @@ p {
 .curly-arrow {
   position: absolute;
 
-  width: 32px;
+  width: 28px;
 
-  left: 520px;
-  top: 112px;
+  left: 575px;
+  top: 150px;
 
-  opacity: 0.35;
+  opacity: 0.45;
 }
 
 /* =========================
@@ -405,14 +410,14 @@ p {
 ========================= */
 
 .compliance-description {
-  padding-top: 6px;
+  padding-top: 2px;
 }
 
 .compliance-description p {
-  max-width: 560px;
+  max-width: 540px;
 
-  font-size: 18px;
-  line-height: 32px;
+  font-size: 17px;
+  line-height: 30px;
 
   color: var(--text-dark);
 }
@@ -423,22 +428,25 @@ p {
 
 .compliance-content {
   display: grid;
+  grid-template-columns: 1fr 1fr;
 
-  grid-template-columns: 520px 620px;
-
-  justify-content: space-between;
-
-  gap: 22px;
+  gap: 34px;
 
   align-items: start;
 }
+
 /* =========================
    Left Illustration
 ========================= */
 
+.compliance-image {
+  padding-top: 0;
+  margin-left: 50px;
+}
+
 .compliance-image img {
-  width: 100%;
-  max-width: 520px;
+  max-width: 445px;
+  padding-top: 52px;
 }
 
 /* =========================
@@ -449,9 +457,10 @@ p {
   display: flex;
   flex-direction: column;
 
-  gap: 20px;
+  gap: 22px;
 
-  margin-top: -26px;
+  margin-top: 78px;
+  margin-left: 34px;
 }
 
 /* =========================
@@ -462,17 +471,21 @@ p {
   display: flex;
   align-items: flex-start;
 
-  gap: 22px;
+  gap: 20px;
 
-  background-color: #ffffff;
+  background-color: #f8f8fb;
 
-  border: 1px solid #e7e9ff;
+  border: 1px solid #e8eaff;
 
   border-radius: 14px;
 
-  padding: 34px 30px;
+  padding: 28px 26px;
 
   transition: var(--transition);
+}
+
+.compliance-card:hover {
+  transform: translateY(-3px);
 }
 
 /* =========================
@@ -480,7 +493,7 @@ p {
 ========================= */
 
 .card-icon {
-  width: 34px;
+  width: 32px;
   flex-shrink: 0;
 }
 
@@ -489,17 +502,128 @@ p {
 ========================= */
 
 .card-content h3 {
-  font-size: 21px;
+  font-size: 20px;
   font-weight: 700;
 
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 
   color: var(--text-dark);
 }
 
 .card-content p {
   font-size: 17px;
-  line-height: 32px;
+  line-height: 30px;
 
   color: var(--text-dark);
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 992px) {
+
+  .compliance-top,
+  .compliance-content {
+    grid-template-columns: 1fr;
+  }
+
+  .compliance-top {
+    gap: 32px;
+  }
+
+  .compliance-content {
+    gap: 45px;
+  }
+
+  .compliance-heading h2 {
+    font-size: 46px;
+    line-height: 58px;
+  }
+
+  .curly-arrow {
+    width: 24px;
+
+    left: 390px;
+    top: 100px;
+  }
+
+  .compliance-image {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+  }
+
+  .compliance-image img {
+    max-width: 430px;
+  }
+
+  .compliance-cards {
+    margin-top: 0;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .compliance-section {
+    padding: 70px 0 80px;
+  }
+
+  .compliance-heading h2 {
+    font-size: 36px;
+    line-height: 48px;
+  }
+
+  .curly-arrow {
+    display: none;
+  }
+
+  .compliance-card {
+    padding: 22px 18px;
+  }
+
+  .card-content h3 {
+    font-size: 18px;
+  }
+
+  .card-content p {
+    font-size: 15px;
+    line-height: 28px;
+  }
+}
+/* final alignment fixes */
+/* =========================
+   Final Pixel Adjustments
+========================= */
+/* FINAL tiny adjustments */
+
+.curly-arrow {
+    top: 85px;
+  left: 500px;
+
+  opacity: 0.85;
+}
+
+.compliance-cards {
+  margin-top: 42px;
+  margin-left: -18px;
+}
+.compliance-image img {
+padding-top: 18px;
+}
+
+.compliance-description p {
+  line-height: 31px;
+   padding-top: -6px;
+}
+.vector1 {
+  position: absolute;
+
+  left: -8px;
+  bottom: 40px;
+
+  width: 120px;
+
+  opacity: 1;
 }
