@@ -8,10 +8,26 @@ html {
   scroll-behavior: smooth;
 }
 
+:root {
+  --primary-color: #4f46e5;
+  --secondary-color: #2563eb;
+
+  --text-dark: #111111;
+  --text-light: #5f5f5f;
+
+  --white-color: #ffffff;
+  --light-bg: #f5f3ff;
+
+  --container-width: 1440px;
+
+  --transition: all 0.3s ease;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #ffffff;
-  color: #111111;
+  background-color: #f8f8fb;
+  color: var(--text-dark);
+  overflow-x: hidden;
 }
 
 img {
@@ -38,32 +54,25 @@ ul {
   list-style: none;
 }
 
-:root {
-  --primary-color: #4f46e5;
-  --secondary-color: #2563eb;
-
-  --text-dark: #111111;
-  --text-light: #666666;
-
-  --white-color: #ffffff;
-  --light-bg: #f5f3ff;
-
-  --container-width: 1200px;
-
-  --transition: all 0.3s ease;
-}
+/* =========================
+   Global Container
+========================= */
 
 .container {
   width: 100%;
   max-width: var(--container-width);
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 40px;
 }
 
+/* =========================
+   Typography
+========================= */
+
 h1 {
-  font-size: 64px;
+  font-size: 58px;
+  line-height: 72px;
   font-weight: 700;
-  line-height: 85px;
 }
 
 h2 {
@@ -83,8 +92,8 @@ p {
 ========================= */
 
 .header {
-  padding: 20px 0;
-  background-color: var(--white-color);
+  padding: 24px 0;
+  background-color: #f8f8fb;
 }
 
 /* =========================
@@ -95,10 +104,13 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  min-height: 80px;
 }
 
+/* Logo */
+
 .logo img {
-  width: 120px;
+  width: 165px;
 }
 
 /* Nav Links */
@@ -106,12 +118,13 @@ p {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 48px;
 }
 
 .nav-links a {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
+  color: var(--text-dark);
   transition: var(--transition);
 }
 
@@ -119,20 +132,34 @@ p {
   color: var(--primary-color);
 }
 
+/* Active Link */
+
+.nav-links li:first-child a {
+  color: var(--primary-color);
+}
+
 /* Contact Button */
 
 .contact-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
   background-color: var(--primary-color);
   color: var(--white-color);
 
-  padding: 12px 24px;
+  padding: 16px 30px;
 
-  border-radius: 8px;
+  border-radius: 12px;
 
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
 
   transition: var(--transition);
+}
+
+.contact-btn img {
+  width: 20px;
 }
 
 .contact-btn:hover {
@@ -147,5 +174,159 @@ p {
 }
 
 .menu-toggle img {
-  width: 24px;
+  width: 26px;
+}
+
+/* =========================
+   Hero Section
+========================= */
+
+.hero-section {
+  padding: 10px 0 90px;
+}
+
+.hero-section .container {
+  overflow: hidden;
+}
+
+.hero-container {
+  display: grid;
+  grid-template-columns: 1fr 1.08fr;
+  align-items: start;
+  gap: 20px;
+}
+
+/* =========================
+   Hero Content
+========================= */
+
+.hero-content {
+  position: relative;
+  max-width: 610px;
+  padding-top: 30px;
+}
+
+/* Decorative Arrow */
+
+.hero-arrow {
+  width: 110px;
+  margin-bottom: 24px;
+  margin-left: 40px;
+  opacity: 0.7;
+}
+
+/* Heading */
+
+.hero-content h1 {
+  margin-bottom: 12px;
+}
+
+.hero-content h1 span {
+  color: var(--primary-color);
+}
+
+/* Underline */
+
+.heading-highlight {
+  position: relative;
+  display: inline-block;
+}
+
+.underline-img {
+  position: absolute;
+
+  left: 0;
+  bottom: -12px;
+
+  width: 100%;
+
+  max-width: 350px;
+}
+/* Paragraph */
+
+.hero-content p {
+  margin-bottom: 36px;
+}
+
+/* =========================
+   Hero Features
+========================= */
+
+.hero-features {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
+  margin-bottom: 42px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.feature-item img {
+  width: 20px;
+}
+
+.feature-item span {
+  font-size: 18px;
+  color: var(--text-dark);
+}
+
+/* =========================
+   Hero Buttons
+========================= */
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.primary-btn,
+.secondary-btn {
+  padding: 16px 34px;
+
+  border-radius: 12px;
+
+  font-size: 18px;
+  font-weight: 500;
+
+  transition: var(--transition);
+}
+
+.primary-btn {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+.secondary-btn {
+  background-color: transparent;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.primary-btn:hover,
+.secondary-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* =========================
+   Hero Image
+========================= */
+.hero-image {
+  display: flex;
+  align-items: flex-start;
+  padding-top: 10px;
+}
+
+.hero-image img {
+  width: 118%;
+  max-width: unset;
+
+  max-height: 610px;
+
+  object-fit: contain;
 }
