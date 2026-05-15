@@ -77,3 +77,75 @@ p {
   line-height: 32px;
   color: var(--text-light);
 }
+
+/* =========================
+   Header
+========================= */
+
+.header {
+  padding: 20px 0;
+  background-color: var(--white-color);
+}
+
+/* =========================
+   Navbar
+========================= */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  width: 120px;
+}
+
+/* Nav Links */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-links a {
+  font-size: 16px;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.nav-links a:hover {
+  color: var(--primary-color);
+}
+
+/* Contact Button */
+
+.contact-btn {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+
+  padding: 12px 24px;
+
+  border-radius: 8px;
+
+  font-size: 16px;
+  font-weight: 500;
+
+  transition: var(--transition);
+}
+
+.contact-btn:hover {
+  opacity: 0.9;
+}
+
+/* Mobile Menu */
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+.menu-toggle img {
+  width: 24px;
+}
