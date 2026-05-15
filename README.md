@@ -2,6 +2,10 @@
 
 A responsive landing page built using HTML, CSS, and JavaScript based on the provided Figma design reference.
 
+## Live Demo
+
+https://transcendent-sfogliatella-3b08d5.netlify.app/
+
 ## Features
 
 - Fully responsive design
