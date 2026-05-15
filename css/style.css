@@ -330,3 +330,176 @@ p {
 
   object-fit: contain;
 }
+/* =========================
+   Compliance Section
+========================= */
+
+.compliance-section {
+  padding: 100px 0 110px;
+  background-color: #ffffff;
+}
+
+.compliance-section .container {
+  max-width: 1320px;
+}
+
+/* =========================
+   Top Layout
+========================= */
+
+.compliance-top {
+  display: grid;
+
+  grid-template-columns: 650px 540px;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  align-items: start;
+
+  margin-bottom: 18px;
+}
+
+/* =========================
+   Left Heading
+========================= */
+
+.compliance-heading {
+  position: relative;
+}
+
+.compliance-heading h2 {
+  max-width: 650px;
+
+  font-size: 58px;
+  line-height: 72px;
+  font-weight: 700;
+
+  letter-spacing: -1px;
+
+  color: var(--text-dark);
+}
+
+.compliance-heading h2 span {
+  color: var(--primary-color);
+}
+
+/* =========================
+   Curly Arrow
+========================= */
+
+.curly-arrow {
+  position: absolute;
+
+  width: 32px;
+
+  left: 520px;
+  top: 112px;
+
+  opacity: 0.35;
+}
+
+/* =========================
+   Right Paragraph
+========================= */
+
+.compliance-description {
+  padding-top: 6px;
+}
+
+.compliance-description p {
+  max-width: 560px;
+
+  font-size: 18px;
+  line-height: 32px;
+
+  color: var(--text-dark);
+}
+
+/* =========================
+   Bottom Layout
+========================= */
+
+.compliance-content {
+  display: grid;
+
+  grid-template-columns: 520px 620px;
+
+  justify-content: space-between;
+
+  gap: 22px;
+
+  align-items: start;
+}
+/* =========================
+   Left Illustration
+========================= */
+
+.compliance-image img {
+  width: 100%;
+  max-width: 520px;
+}
+
+/* =========================
+   Cards Layout
+========================= */
+
+.compliance-cards {
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+
+  margin-top: -26px;
+}
+
+/* =========================
+   Single Card
+========================= */
+
+.compliance-card {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 22px;
+
+  background-color: #ffffff;
+
+  border: 1px solid #e7e9ff;
+
+  border-radius: 14px;
+
+  padding: 34px 30px;
+
+  transition: var(--transition);
+}
+
+/* =========================
+   Card Icon
+========================= */
+
+.card-icon {
+  width: 34px;
+  flex-shrink: 0;
+}
+
+/* =========================
+   Card Content
+========================= */
+
+.card-content h3 {
+  font-size: 21px;
+  font-weight: 700;
+
+  margin-bottom: 10px;
+
+  color: var(--text-dark);
+}
+
+.card-content p {
+  font-size: 17px;
+  line-height: 32px;
+
+  color: var(--text-dark);
+}
